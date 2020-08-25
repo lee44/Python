@@ -7,6 +7,12 @@ import xlsxwriter
 
 pd.options.display.float_format = '{:.0f}'.format
 
+# Mac: Replace user_name with your own
+# directory = '/Users/user_name/Desktop/'
+
+# Windows 10: Replace user_name with your own
+# directory = 'C:/Users/user_name/Desktop/'
+
 ticker = input("Input the ticker of the company you'd like to see the financials of: ")
 
 def yahoo_financial_statements():
@@ -85,7 +91,7 @@ cash_flow_statement = financials[2]
 # Convert income statement list to dataFrame
 df_income_statement = pd.DataFrame(income_statement)
 # Create a Pandas Excel writer using XlsxWriter as the engine.
-income_statement_writer = pd.ExcelWriter('/Users/joshualee/Desktop/Stock_Financials/'+ticker+' income.xlsx', engine='xlsxwriter')
+income_statement_writer = pd.ExcelWriter(directory+ticker+' income.xlsx', engine='xlsxwriter')
 # Convert the dataframe to an XlsxWriter Excel object.
 df_income_statement.to_excel(income_statement_writer, index=False,sheet_name='Sheet1')
 
@@ -147,7 +153,7 @@ income_statement_worksheet.write_url('A29', "https://www.divestopedia.com/defini
 income_statement_worksheet.write_comment('B1', 'Trailing Twelve Months')
 
 df_balance_sheet = pd.DataFrame(balance_sheet)
-balance_sheet_writer = pd.ExcelWriter('/Users/joshualee/Desktop/Stock_Financials/'+ticker+' balance_sheet.xlsx', engine='xlsxwriter')
+balance_sheet_writer = pd.ExcelWriter(directory+ticker+' balance_sheet.xlsx', engine='xlsxwriter')
 df_balance_sheet.to_excel(balance_sheet_writer, index=False,sheet_name='Sheet1')
 
 balance_sheet_worksheet = balance_sheet_writer.sheets['Sheet1']
@@ -180,7 +186,7 @@ balance_sheet_worksheet.write_url('A14', "https://www.investopedia.com/terms/o/o
 
 
 df_cash_flow_statement = pd.DataFrame(cash_flow_statement)
-cash_flow_statement_writer = pd.ExcelWriter('/Users/joshualee/Desktop/Stock_Financials/'+ticker+' cash_flow.xlsx', engine='xlsxwriter')
+cash_flow_statement_writer = pd.ExcelWriter(directory+ticker+' cash_flow.xlsx', engine='xlsxwriter')
 df_cash_flow_statement.to_excel(cash_flow_statement_writer, index=False,sheet_name='Sheet1')
 
 cash_flow_statement_worksheet = cash_flow_statement_writer.sheets['Sheet1']
