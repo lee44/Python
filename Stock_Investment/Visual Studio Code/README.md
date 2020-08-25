@@ -1,3 +1,2 @@
-# Yahoo_Financial_Web_Scraper
-
-A web scraper written in python that grabs the income statement, balance sheet, and cash flow from Yahoo Fiancials website and exports the data to three excel files
+# Yahoo Finance Web Scraper
+A web scraper that retrieves data from the income statement, balance sheet, and cash flow to export into three excel files. Each file contains hyperlinks and comments for definitions on most of the financial words.
