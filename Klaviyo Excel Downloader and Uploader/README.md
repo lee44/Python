@@ -1,4 +1,4 @@
-# Email Downloader and Klaviyo Uploader
+# Email Downloader and Klaviyo Profiles Uploader
 A script that will download all attachments of the most recent email by email subject line. After attachments are downloaded, the script will upload the excel files using the Klaviyo API. Please note Klaviyo only allows adding a maxiumum of 100 profiles per request.
 
 ## Instructions
