@@ -1,7 +1,7 @@
 import os
 import shutil
 
-trash_location = '/Users/joshualee/.Trash'
+trash_location = '/Users/user_name/.Trash'
 # listdir gives names of all files in trash can
 files_in_trash = os.listdir(trash_location)
 
