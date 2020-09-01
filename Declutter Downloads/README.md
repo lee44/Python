@@ -13,4 +13,4 @@ Note: For me personally, I schedule this script to run at startup. Follow these 
 https://stackoverflow.com/questions/29338066/run-python-script-at-os-x-startup
 
 # Python Version
-Python 2.6.1
+Python 3.8.5
