@@ -1,5 +1,5 @@
 ## Declutter Downloads
-Python script to organize your files to appropriate folders.
+Python script to organize your files to appropriate folders such as PDF, PSD, Images, DMG, and Excel. The excel folder will have all excel files ending with .csv, .xls, and .xlsx.
 
 # Features
 - Categorize files -> moves files to folders
