@@ -2,12 +2,15 @@
 Python script to organize your files to appropriate folders.
 
 # Features
-1. Categorize files
-2. Decategorize files
+- Categorize files -> moves files to folders
+- Decategorize files -> undo moving files to folders
 
 # Install
 pip3 install os </br>
 pip3 install shutil </br>
+
+Note: For me personally, I schedule this script to run at startup. Follow these instructions on stack overflow: </br>
+https://stackoverflow.com/questions/29338066/run-python-script-at-os-x-startup
 
 # Python Version
 Python 2.6.1
