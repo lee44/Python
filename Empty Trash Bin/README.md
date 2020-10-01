@@ -9,7 +9,7 @@ Note: This script can be scheduled to run monthly. Follow instructions in this l
 https://martechwithme.com/convert-python-script-app-windows-mac/
 
 ## Python Version
-Python 2.7.1
+Python 3.8.5
 
 ## Operating System
 Mac OS

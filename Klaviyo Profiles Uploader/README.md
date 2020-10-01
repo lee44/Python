@@ -22,7 +22,7 @@ pip3 install datetime import date <br />
 pip3 install time <br />
 
 ## Python Version
-Python 2.7.1
+Python 3.8.5
 
 ## Links
 Klaviyo API Docs https://www.klaviyo.com/docs/api/v2/lists

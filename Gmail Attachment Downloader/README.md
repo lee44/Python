@@ -6,4 +6,4 @@ pip3 install imaplib </br >
 pip3 install email </br >
 
 ## Python Version
-Python 2.7.1
+Python 3.8.5
