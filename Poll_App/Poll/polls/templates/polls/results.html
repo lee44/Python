@@ -1,9 +1,14 @@
 <h1>{{ question.question_text }}</h1>
 
 <ul>
+    <!-- question.choice_set.all returns an iterable of Choice objects -->
 {% for choice in question.choice_set.all %}
-    <li>{{ choice.choice_text }} -- {{ choice.votes }} vote{{ choice.votes|pluralize }}</li>
+<!-- Values declared after a vertical bar | are called filters. Django filters offer a way to apply formatting logic to individual variables.
+     If votes is = 1 then {{ choice.votes|pluralize }} will show nothing making it "vote" 
+     If votes is > 1 then {{ choice.votes|pluralize }} will show an "s" making it "votes" -->
+    <li>{{ choice.choice_text }} -- {{ choice.votes }} vote{{ choice.votes|pluralize }}</li> 
 {% endfor %}
 </ul>
 
+<!-- {% url %} is a tag that will find the url path for polls:detail in the urls.py -->
 <a href="{% url 'polls:detail' question.id %}">Vote again?</a>
