@@ -13,6 +13,7 @@ class IndexView(generic.ListView):
     def get_queryset(self):
         """
         * Return the last five published questions
+        * pub_date is a column in data model Question
         * pub_date__lte: lte means less than or equal to
         * -pub_date: descending publication date
         """
@@ -21,6 +22,12 @@ class IndexView(generic.ListView):
 class DetailView(generic.DetailView):
     model = Question
     template_name = 'polls/detail.html'
+
+    def get_queryset(self):
+        """
+        Excludes any questions that aren't published yet.
+        """
+        return Question.objects.filter(pub_date__lte=timezone.now())
 
 class ResultsView(generic.DetailView):
     model = Question
