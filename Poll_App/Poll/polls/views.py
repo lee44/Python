@@ -35,6 +35,7 @@ def vote(request, question_id):
         # Redisplay the question voting form if no choice was selected.
         return render(request, 'polls/detail.html', {'question': question,'error_message': "You didn't select a choice.",})
     else:
+        # selected_choice has access to the datamodel Choice which has three columns: quesiton, choice text, and votes
         selected_choice.votes += 1
         selected_choice.save()
         # Always return an HttpResponseRedirect after successfully dealing
