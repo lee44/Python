@@ -1,5 +1,5 @@
 /* This file is in the directory path polls/static/polls/style.css because Django chooses the first static file it finds and if we have a static file with the same name in another app, Django wont be able
-to distinguish them. By namespacing them which is putting this file inside another directory with the name of the app, Django will know which file to laod */
+to distinguish them. By namespacing them which is putting this file inside another directory with the name of the app, Django will know which file to load */
 li a {
     color: green;
 }

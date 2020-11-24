@@ -1,8 +1,8 @@
 import os
 import shutil
 
-downloads_path = '/Users/joshualee/Downloads'
-directory_list = ['/Images', '/Excel', '/PSD', '/DMG', '/PDF']
+downloads_path = 'C:/Users/Lee/Downloads'
+directory_list = ['/IMAGES', '/EXCEL', '/PSD', '/APPLICATIONS', '/PDF', '/WORD DOCUMENTS']
 
 for directory in directory_list:
     if not os.path.isdir(downloads_path + directory):
@@ -38,7 +38,7 @@ def Categorize():
                 new_file_path = os.path.join(downloads_path,file_name_no_extension+'_new'+file_extension)
                 os.rename(old_file_path,new_file_path)
                 shutil.move(new_file_path,downloads_path+directory_list[2])
-        elif file_extension == '.dmg':
+        elif file_extension == '.exe':
             try:
                 shutil.move(old_file_path,downloads_path+directory_list[3])
             except shutil.Error:
@@ -52,6 +52,13 @@ def Categorize():
                 new_file_path = os.path.join(downloads_path,file_name_no_extension+'_new'+file_extension)
                 os.rename(old_file_path,new_file_path)
                 shutil.move(new_file_path,downloads_path+directory_list[4])
+        elif file_extension == '.docx':
+            try:
+                shutil.move(old_file_path,downloads_path+directory_list[5])
+            except shutil.Error:
+                new_file_path = os.path.join(downloads_path,file_name_no_extension+'_new'+file_extension)
+                os.rename(old_file_path,new_file_path)
+                shutil.move(new_file_path,downloads_path+directory_list[5])
 
 # Moves everything out of folders specified in directory_list
 def deCategorize():
